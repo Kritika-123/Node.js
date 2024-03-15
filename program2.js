@@ -1,0 +1,11 @@
+x=10;
+y=10.0;//'10.0'//'10a'
+console.log(typeof(x))
+console.log(typeof(y))
+if(x==y)//(x===y)
+{
+    console.log('True')
+}
+else{
+    console.log('False')
+}
