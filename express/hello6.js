@@ -1,3 +1,4 @@
+// cookies session
 var cookieSession = require('cookie-session')//install npm i cookieSession beacause we require it
 var express = require('express')
 var app = express()
