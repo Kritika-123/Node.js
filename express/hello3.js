@@ -20,4 +20,4 @@ app.get('/welcome',function(req,res){
 app.get('/welcome/inside',function(req,res){
     res.send('you are inside page')
 })
-app.listen(3000);
+app.listen(3000)
