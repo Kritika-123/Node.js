@@ -1,19 +1,19 @@
 //timeout
-// function countDown(fromNumber){
-//     console.log(fromNumber);
-// let nextNumber= fromNumber - 1;
-// if(nextNumber>=0){
-//     setTimeout(function(){
-//         countDown(nextNumber);
-//     },1000);
-// }
-// else{
-//     setTimeout(function(){
-//         console.log('stop');
-//     },1000);
-// }
-// }
-// countDown(5);
+function countDown(fromNumber){
+    console.log(fromNumber);
+let nextNumber= fromNumber - 1;
+if(nextNumber>=0){
+    setTimeout(function(){
+        countDown(nextNumber);
+    },1000);
+}
+else{
+    setTimeout(function(){
+        console.log('stop');
+    },1000);
+}
+}
+countDown(5);
 
 
 
