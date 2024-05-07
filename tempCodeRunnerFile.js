@@ -1,6 +1,4 @@
-//inflate
-const z=require('zlib');
-const c=Buffer.from('eJzLSM3JyVdIyixJzkgtBgAjPQUX','base64');
-z.inflate(c,(err,Buffer)=>{
-    console.log(Buffer.toString());
-});
+var buffer1 = Buffer.from('This is Nodejs');
+var buffer2 = Buffer.alloc(10);
+buffer1.copy(buffer2,4,4,10);
+console.log("buffer2 content: " + buffer2.toString());

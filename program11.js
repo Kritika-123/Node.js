@@ -38,6 +38,7 @@
 
 //Synchronus
 // var fs=require("fs");
+// fs.writeFileSync("Input.txt","heeeeeelllllloooo1");
 // var data=fs.readFileSync("Input.txt");
 // var org=data.toString();
 // console.log(org);

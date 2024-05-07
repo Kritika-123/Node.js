@@ -10,7 +10,7 @@ MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(client => {
         console.log("Database!, connected to the db");
 
-        const db = client.db('Practice');
+        const db = client.db('Practice1');
 
         db.collection('test').insertOne({ name: 'test' }, (err, result) => {
             if (err) {

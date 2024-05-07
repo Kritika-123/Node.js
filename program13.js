@@ -4,24 +4,24 @@
 
 // const buf= Buffer.alloc(5,'alloc');
 // console.log( buf);
-//console.log(buf.fill('hello',3,4));
+// console.log(buf.fill('hello',3,4));
 
-// const buf=Buffer.alloc(8); //first code
+// const buf=Buffer.alloc(9); //first code
 // console.log(buf);
-// console.log(buf.fill('hello',3,8));
+// console.log(buf.fill('helloa',3,9));
 
 // const buf1 = Buffer.from('This is Node.js class');
 // const buf2 = Buffer.from('54686973206973204e6f64652e6a7320636c617373','hex');
 // console.log(buf1.toString('hex',5,15));
 // console.log(buf2.toString('utf8',5,10));
 
-buf=new Buffer.alloc(50); //write
-n=buf.write('This is Nodejs class ');
-console.log('The number of octets are:'+n);
+// buf=new Buffer.alloc(50); //write
+// n=buf.write('This is Nodejs class ');
+// console.log('The number of octets are:'+n);
 
 // var buf1 = Buffer.from('wow');//concatenate
 // var buf2= Buffer.from('hello');
-// var buf3 = Buffer.concat([buf1,buf2],5);
+// var buf3 = Buffer.concat([buf1,buf2],7);
 // console.log("The contents are " + buf3.toString());
 
 // var buffer1 = Buffer.from('ABCD');
