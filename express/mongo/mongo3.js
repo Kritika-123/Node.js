@@ -13,7 +13,7 @@ app.post('/search', (req, res) => {
     MongoClient.connect(url)
         .then(db => {
             console.log("connected to db");
-            var dbo = db.db("Kritika1");
+            var dbo = db.db("Kritika12");
             dbo.collection("Student_data").find(req.body).toArray()
                 .then(data => {
                     console.log(data);
