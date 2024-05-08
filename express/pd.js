@@ -10,8 +10,8 @@ password: 'root',
 port: 5435,
 });
 app.use(express.json());
-app.get('/todos', (req, res) => {
-pool.query('SELECT * FROM todos', (error, result) => {
+app.get('/users', (req, res) => {
+pool.query('SELECT * FROM users', (error, result) => {
 if (error) {
 console.error('Error fetching todos', error);
 res.status(500).json({ error: 'Internal server error' });
@@ -20,21 +20,22 @@ res.json(result.rows);
 }
 });
 });
-app.post('/todos', (req, res) => {
-const { title, completed } = req.body;
-pool.query('INSERT INTO todos (title, completed) VALUES ($1, $2)', [title, completed], (error) => {
+app.post('/users', (req, res) => {
+const { username, email } = req.body;
+pool.query('INSERT INTO users (username, email) VALUES ($1, $2)', [username, email], (error) => {
 if (error) {
 console.error('Error creating todo', error);
 res.status(500).json({ error: 'Internal server error' });
 } else {
 res.status(201).json({ message: 'Todo created successfully' });
 }
+
 });
 });
-app.put('/todos/:id', (req, res) => {
+app.put('/users/:id', (req, res) => {
 const { id } = req.params;
-const { title, completed } = req.body;
-pool.query('UPDATE todos SET title = $1, completed = $2 WHERE id = $3', [title, completed, id], (error) => {
+const { username, email } = req.body;
+pool.query('UPDATE users SET username = $1, email = $2 WHERE id = $3', [username, email], (error) => {
 if (error) {
 console.error('Error updating todo', error);
 res.status(500).json({ error: 'Internal server error' });
